@@ -1,6 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- Not required so the app still installs on phones without NFC;
+         the app shows a "not supported" message there instead. -->
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
     <application
-        android:label="flutter_application_1"
+        android:label="NFC Card Reader"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
